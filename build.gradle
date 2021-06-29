@@ -101,3 +101,6 @@ task copyRuntimeLibs(type: Copy) {
   into 'libs'
   from configurations.testRuntime
 }
+
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
